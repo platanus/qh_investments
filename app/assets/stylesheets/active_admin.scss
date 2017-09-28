@@ -10,10 +10,10 @@
 // Active Admin's got SASS!
 @import "active_admin/mixins";
 @import "active_admin/base";
-$skinActiveColor: #001CEE;
-$skinHeaderBck: #002744;
-$panelHeaderBck: #002744;
-//$skinLogo: $skinHeaderBck image-url("logo_admin.png") no-repeat center center;
+$skinActiveColor: gray;
+$skinHeaderBck: #DF0101;
+$panelHeaderBck: whitesmoke;
+$skinLogo: $skinHeaderBck image-url("logo.png") no-repeat center center;
 
 @import "active_skin";
 
