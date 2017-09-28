@@ -19,7 +19,7 @@ class BalanceService
   def investment_amount(investment)
     Movement.where(investment: investment).map do |movement|
       mult = movement.operation_type == "sell" ? -1 : 1
-      movement.amount * mult
+      movement.amount.to_i * mult
     end.sum
   end
 
