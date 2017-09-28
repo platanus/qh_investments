@@ -10,4 +10,6 @@ es-CL:
       movement:
         one: Movimiento
         other: Movimientos
-
+      company:
+        one: Compañia
+        other: Compañias  
