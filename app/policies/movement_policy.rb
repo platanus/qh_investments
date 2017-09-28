@@ -1,0 +1,2 @@
+class MovementPolicy < ApplicationPolicy
+end
