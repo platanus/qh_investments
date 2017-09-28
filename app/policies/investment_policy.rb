@@ -1,0 +1,2 @@
+class InvestmentPolicy < ApplicationPolicy
+end
