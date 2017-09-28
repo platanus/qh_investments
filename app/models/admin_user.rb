@@ -6,7 +6,11 @@ class AdminUser < ApplicationRecord
   devise :database_authenticatable,
          :recoverable, :rememberable, :trackable, :validatable
 
+<<<<<<< Updated upstream
   extend enumerize
+=======
+  extend Enumerize
+>>>>>>> Stashed changes
   enumerize :teleconsultation_state, in: ROLES, scope: false, default: nil
 end
 
