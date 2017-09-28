@@ -2,11 +2,11 @@ class AdminUser < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
 
-  extend enumerize
   ROLES = ['admin', 'manager', 'worker']
   devise :database_authenticatable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  extend enumerize
   enumerize :teleconsultation_state, in: ROLES, scope: false, default: nil
 end
 
