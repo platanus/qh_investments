@@ -1,5 +1,6 @@
 class Investment < ApplicationRecord
   belongs_to :admin_user
+  extend Enumerize
 end
 
 # == Schema Information
