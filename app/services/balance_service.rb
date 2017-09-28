@@ -17,6 +17,9 @@ class BalanceService
   end
 
   def investment_amount(investment)
-    Movement.where(investment: investment).map(&:amount).sum
+    Movement.where(investment: investment).map do |movement|
+      movement.amount * (-1 if movement.operation_type == "sell")
+    end.sum
   end
+
 end
