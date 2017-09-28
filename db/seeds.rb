@@ -10,9 +10,9 @@ puts "creating admin users"
 end
 
 puts "creating investments"
-[{"code"=>"COP523","description"=>"Acciones Copec","investment_type"=>"stock", id: 1, admin_user: AdminUser.take},
- {"code"=>"FAL931","description"=>"Acciones Falabella","investment_type"=>"stock", id: 2, admin_user: AdminUser.take},
- {"code"=>"LAT352","description"=>"Acciones LATAM","investment_type"=>"stock", id: 3, admin_user: AdminUser.take}].each do |data|
+[{"code"=>"AAPL","description"=>"Acciones Copec","investment_type"=>"stock", id: 1, admin_user: AdminUser.take},
+ {"code"=>"GOOG","description"=>"Acciones Falabella","investment_type"=>"stock", id: 2, admin_user: AdminUser.take},
+ {"code"=>"MSFT","description"=>"Acciones LATAM","investment_type"=>"stock", id: 3, admin_user: AdminUser.take}].each do |data|
   Investment.create!(data) unless Investment.exists?(code: data['code'])
 end
 
