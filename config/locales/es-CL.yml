@@ -1,2 +1,13 @@
 es-CL:
-  hello: "Hola mundo"
+  activerecord:
+    models:
+      admin_user:
+        one: Usuario
+        other: Usuarios
+      investments:
+        one: Inversion
+        other: Investiones
+      movement:
+        one: Movimiento
+        other: Movimientos
+
