@@ -13,6 +13,7 @@ es-CL:
     attributes:
       shared: &shared
         id: Id
+        sign_in_count: Contador Ingresos
         email: Email
         password: Clave
         created_at: Fecha Creacion
@@ -35,4 +36,9 @@ es-CL:
         <<: *shared
       movement:
         <<: *shared
+  enumerize:
+    movement:
+      operation_type:
+        buy: Compra
+        sell: Venta
 

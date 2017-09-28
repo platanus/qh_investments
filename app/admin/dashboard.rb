@@ -5,8 +5,8 @@ ActiveAdmin.register_page "Dashboard" do
   content title: proc{ I18n.t("active_admin.dashboard") } do
     div class: "blank_slate_container", id: "dashboard_default_message" do
       span class: "blank_slate" do
-        span I18n.t("active_admin.dashboard_welcome.welcome")
-        small I18n.t("active_admin.dashboard_welcome.call_to_action")
+        span 'Bienvenido, el balance de sus inversiones es'
+        small ''
       end
     end
 
@@ -17,13 +17,13 @@ ActiveAdmin.register_page "Dashboard" do
 
        column do
          panel "Patrominio" do
-           para BalanceService.new(current_admin_user).total_balance.to_s
+           para number_to_currency BalanceService.new(current_admin_user).total_balance.to_s
          end
        end
 
        column do
         panel "Rentabilidad Cartera" do
-          para 0
+          para '27%'
         end
       end
 

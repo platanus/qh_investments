@@ -4,8 +4,18 @@ class Investment < ApplicationRecord
 
   enumerize :investment_type, in: [:stock, :etf, :bond]
 
+  before_validation :set_user
+  
+  def set_user
+    self.admin_user = AdminUser.take
+  end
+
   def to_s
     code
+  end
+
+  def balance
+    BalanceService.new(nil).investment_amount(self)
   end
 end
 

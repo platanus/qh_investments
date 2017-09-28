@@ -5,6 +5,7 @@ ActiveAdmin.register Investment do
     column :code
     column :description
     column :investment_type
+    column :balance
   end
 
 
