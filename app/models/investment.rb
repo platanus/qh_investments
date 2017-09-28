@@ -3,6 +3,10 @@ class Investment < ApplicationRecord
   extend Enumerize
 
   enumerize :investment_type, in: [:stock, :etf, :bond]
+
+  def to_s
+    code
+  end
 end
 
 # == Schema Information

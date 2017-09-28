@@ -10,4 +10,29 @@ es-CL:
       movement:
         one: Movimiento
         other: Movimientos
+    attributes:
+      shared: &shared
+        id: Id
+        email: Email
+        password: Clave
+        created_at: Fecha Creacion
+        updated_at: Fecha Actualizado
+        role: Rol
+        code: Código
+        description: Nombre
+        investment_type: Tipo Inversión
+        amount: Cantidad
+        value: Valor
+        operation_type: Tipo Operación
+        date: Fecha
+        investment: Inversión
+        admin_user_id: Usuario
+        admin_user: Usuario
+        investment_id: Inversión
+      admin_user:
+        <<: *shared
+      investment:
+        <<: *shared
+      movement:
+        <<: *shared
 
