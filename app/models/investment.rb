@@ -1,6 +1,8 @@
 class Investment < ApplicationRecord
   belongs_to :admin_user
   extend Enumerize
+
+  enumerize :investment_type, in: [:stock, :etf, :bond]
 end
 
 # == Schema Information
